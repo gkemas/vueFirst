@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>{{content}}</p> 
+        <a :target="eduflow.target" v-bind:href ="eduflow.url" :alt ="eduflow.alt">{{eduflow.title}}</a>
+        <br>
+        <br>
+        <button v-on:click="changeTitle('1. button')">Tiitle değiştir1...</button>
+        <button v-on:click="changeTitle('2. button')">Tiitle değiştir2...</button>
+        <div class="box" @mousemove="updateCoords('mouseMoove', $event)"  @click="changeTitle('Box üzerinden gelen.')">
+        <span>{{coords.x}}, {{coords.y}}</span>
+        </div>
+    </div>
+    <script src="./app.js"></script> 
+</body>
+</html> 
