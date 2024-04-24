@@ -14,6 +14,7 @@
         <button @click="showborder = !showborder">Border Ekle/Ekleme</button>
         <button @click="redBG = !redBG">Kırmızı Ekle/Ekleme</button>
         <div class="box" :class="{border: showborder, red : redBG}"></div>
+        <!-- computed ile yaptık daha temizi -->
         <div class="box" :class="boxClasses"></div>
         <div class="box" :style="{backgroundColor : bgColor}"></div>
     </div>  
