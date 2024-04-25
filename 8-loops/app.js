@@ -33,7 +33,7 @@ const app = Vue.createApp({
         },
         unCompletedItemCount(){
             return this.todoList.filter(t => !t.completed).length
-        }
+        },
     }
 
 }).mount("#app");
